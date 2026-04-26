@@ -6,6 +6,7 @@ def check_balance():
 def deposit():
     amount = int(input("Enter amount to deposit: "))
     data.balance += amount
+    data.transactions.append(f"Deposited: {amount}")
     print("Deposit successful!")
 
 def withdraw():
@@ -14,4 +15,10 @@ def withdraw():
         print("Insufficient balance!")
     else:
         data.balance -= amount
+        data.transactions.append(f"Withdrawn: {amount}")
         print("Withdrawal successful!")
+
+def statement():
+    print("\nTransaction History:")
+    for t in data.transactions:
+        print(t)
