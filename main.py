@@ -8,7 +8,8 @@ def atm():
             print("1. Check Balance")
             print("2. Deposit")
             print("3. Withdraw")
-            print("4. Exit")
+            print("4. Statement")
+            print("5. Exit")
 
             choice = int(input("Enter your choice: "))
 
@@ -19,6 +20,8 @@ def atm():
             elif choice == 3:
                 operations.withdraw()
             elif choice == 4:
+                 operations.statement()
+            elif choice == 5:
                 print("Thank you for using ATM!")
                 break
             else:
